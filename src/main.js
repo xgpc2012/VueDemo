@@ -3,13 +3,30 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import utils from './common/utils'
+import api from './common/api'
+import base from './common/base'
+import global from './common/global'
 
-Vue.config.productionTip = false
+import Mint from 'mint-ui';
+import 'mint-ui/lib/style.css'
+import '../static/css/common.css' /*引入公共样式*/
+
+
+//加载插件
+Vue.use(Mint);
+//挂载全局函数
+Vue.prototype.utils = utils;
+Vue.prototype.api = api;
+Vue.prototype.base = base;
+Vue.prototype.global = global;
+
+Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  template: '<App/>',
-  components: { App }
-})
+    el: '#app',
+    router,
+    template: '<App/>',
+    components: {App}
+});

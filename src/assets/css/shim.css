@@ -1,0 +1,21 @@
+.vux-tab-container{
+    height: 2.75rem !important;
+}
+
+.mint-loadmore-top span {
+    display: inline-block;
+    transition: .2s linear;
+    vertical-align: middle;
+}
+
+.mint-loadmore-top {
+    color: #A7B0B5;
+}
+
+.vux-tab-wrap {
+    position: fixed !important;
+    padding-top: 0 !important;
+    top: 44px;
+    height: 44px;
+    width: 100%;
+}
