@@ -64,7 +64,7 @@
                 msgTypeId: "02",
                 typeMap: ["02", "01", "03"],
                 msgInfoList: [
-                    {"msgSubTypeId":"0101"}
+                    // {"msgSubTypeId":"0102"}
                 ],
                 allLoaded: false,//是否已加载完毕
                 wrapperHeight: 0,
@@ -111,22 +111,6 @@
                         this.$refs.loadmore.onTopLoaded();
                     }, 500);
                 })
-            }
-        },
-        filters: {
-            getTitle(msgSubTypeId) {
-                console.log(this);
-                // var msgTypeObj=this.global.msgTypeObj;
-                // let title = msgTypeObj[msgSubTypeId]||"其他消息内容";
-                return title;
-            },
-            transformTime(time) {
-                return time;
-                //return new Date(time).format("yyyy.MM.dd hh:mm:ss");
-            },
-            getPlainText(content) {
-                return content;
-                //return content.replace(/<\/?.*?>/g, '');
             }
         },
         watch: {

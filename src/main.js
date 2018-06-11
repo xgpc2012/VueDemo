@@ -7,6 +7,7 @@ import utils from './common/utils'
 import api from './common/api'
 import base from './common/base'
 import global from './common/global'
+import filters from './common/filters'
 
 import Mint from 'mint-ui';
 import 'mint-ui/lib/style.css'
@@ -20,6 +21,11 @@ Vue.prototype.utils = utils;
 Vue.prototype.api = api;
 Vue.prototype.base = base;
 Vue.prototype.global = global;
+
+//注册全局过滤器
+Object.keys(filters).forEach(key => {
+    Vue.filter(key, filters[key])
+});
 
 Vue.config.productionTip = false;
 
